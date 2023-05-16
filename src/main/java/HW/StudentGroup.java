@@ -16,23 +16,18 @@ public class StudentGroup {
     public void addStudent(Student student) {
         students.add(student);
     }
-
-    // Remove a student from the group
     public void removeStudent(Student student) {
         students.remove(student);
     }
 
-    // Change the headman of the group
     public void changeHeadman(Student student) {
         headman = student;
     }
 
-    // Rename a student in the group
     public void renameStudent(Student student, String newName) {
         student.setName(newName);
     }
 
-    // Add a task for all students in the group
     public void addTask(String task) {
         tasks.add(task);
         students.stream().forEach(x->x.addTask(task));
